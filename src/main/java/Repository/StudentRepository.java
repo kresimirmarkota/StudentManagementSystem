@@ -8,5 +8,5 @@ import java.util.UUID;
 public interface StudentRepository {
 
     Student findStudentById(UUID studentID);
-    ArrayList<Student>findStudentsByName(String name);
+    Student findStudentsByName(String name);
 }

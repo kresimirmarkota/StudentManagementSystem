@@ -55,6 +55,17 @@ public class StudentDatabase implements StudentRepository{
                 UUID.randomUUID(),
                 UUID.randomUUID(),
                 new ArrayList<Subject>(List.of(sub4,sub5,sub6)));
+
+        Student stud2 = new Student("Tina",
+                "Perković",
+                LocalDate.of(1993, 5, 7),
+                UUID.randomUUID(),
+                UUID.randomUUID(),
+                new ArrayList<Subject>(List.of(sub2,sub5,sub1)));
+
+        studentDatabase.add(stud1);
+        studentDatabase.add(stud3);
+        studentDatabase.add(stud1);
     }
 
     @Override
@@ -72,14 +83,14 @@ public class StudentDatabase implements StudentRepository{
     }
 
     @Override
-    public ArrayList<Student> findStudentsByName(String studentName) {
-        ArrayList<Student> studentListByName = null;
+    public Student findStudentsByName(String studentName) {
+            Student returnedStudent = null;
         for (Student student : studentDatabase){
             if(student.getName().equals(studentName)){
-                studentListByName.add(student);
+               returnedStudent=student;
             }
         }
-        return studentListByName;
+        return returnedStudent;
     }
 
 
