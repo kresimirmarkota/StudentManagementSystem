@@ -88,6 +88,7 @@ public class StudentDatabase implements StudentRepository{
         for (Student student : studentDatabase){
             if(student.getName().equals(studentName)){
                returnedStudent=student;
+
             }
         }
         return returnedStudent;

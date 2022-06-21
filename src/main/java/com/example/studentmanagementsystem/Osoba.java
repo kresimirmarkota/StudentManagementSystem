@@ -1,7 +1,8 @@
 package com.example.studentmanagementsystem;
 
+import javafx.scene.control.TableColumn;
+
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.UUID;
 
 public abstract class Osoba {
@@ -10,7 +11,7 @@ public abstract class Osoba {
     protected LocalDate dateOfBirth;
     protected UUID oib;
 
-    Osoba(String name,String lastName, LocalDate dateOfBirth, UUID oib){
+    Osoba(String name, String lastName, LocalDate dateOfBirth, UUID oib){
         this.name = name;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;

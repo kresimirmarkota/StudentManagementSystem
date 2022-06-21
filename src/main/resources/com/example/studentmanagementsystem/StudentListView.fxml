@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagementsystem.TableViewController">
    <children>
-      <SplitPane dividerPositions="0.652317880794702, 0.8956953642384106" layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="606.0">
+      <SplitPane dividerPositions="0.652317880794702, 0.8956953642384106, 0.5" layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="606.0">
          <items>
             <TableView fx:id="studentiTablicaTv" prefHeight="398.0" prefWidth="534.0">
               <columns>
@@ -21,7 +21,8 @@
               </columns>
             </TableView>
             <TextField fx:id="upisiImeTf" promptText="Upiši ime studenta" />
-            <Button fx:id="pretraziBtn" mnemonicParsing="false" text="Pretraži" />
+            <Button fx:id="pretraziBtn" mnemonicParsing="false" onAction="#pretraziStudenta" text="Pretraži" />
+            <Button fx:id="prikaziBtn" mnemonicParsing="false" text="Prikaži" />
          </items>
       </SplitPane>
    </children>
