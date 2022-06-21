@@ -39,6 +39,14 @@ private  TableColumn<Student, LocalDate> datumRodenjaTc;
 public void prikazi(ActionEvent event){
     StudentDatabase sdb = new StudentDatabase();
     sdb.generateDataInDatabase();
+    ObservableList<Student> list = FXCollections.observableArrayList(sdb.getStudentDatabase());
+    oibTc.setCellValueFactory(new PropertyValueFactory<Student, UUID>("oib"));
+    studentIdTc.setCellValueFactory(new PropertyValueFactory<Student, UUID>("studentId"));
+    imeTc.setCellValueFactory(new PropertyValueFactory<Student, String>("name"));
+    prezimeTc.setCellValueFactory(new PropertyValueFactory<Student, String>("lastName"));
+    datumRodenjaTc.setCellValueFactory(new PropertyValueFactory<Student, LocalDate>("dateOfBirth"));
+
+    studentiTablicaTv.setItems(list);
 
 }
 

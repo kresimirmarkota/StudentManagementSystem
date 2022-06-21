@@ -15,6 +15,10 @@ public class StudentDatabase implements StudentRepository{
 
     ArrayList<Student> studentDatabase = new ArrayList<Student>();
 
+    public ArrayList<Student> getStudentDatabase() {
+        return studentDatabase;
+    }
+
     public void generateDataInDatabase(){
 
         Professor prof1 = new Professor("Marko",
@@ -65,7 +69,7 @@ public class StudentDatabase implements StudentRepository{
 
         studentDatabase.add(stud1);
         studentDatabase.add(stud3);
-        studentDatabase.add(stud1);
+        studentDatabase.add(stud2);
     }
 
     @Override

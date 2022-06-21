@@ -22,7 +22,7 @@
             </TableView>
             <TextField fx:id="upisiImeTf" promptText="Upiši ime studenta" />
             <Button fx:id="pretraziBtn" mnemonicParsing="false" onAction="#pretraziStudenta" text="Pretraži" />
-            <Button fx:id="prikaziBtn" mnemonicParsing="false" text="Prikaži" />
+            <Button fx:id="prikaziBtn" mnemonicParsing="false" onAction="#prikazi" text="Prikaži" />
          </items>
       </SplitPane>
    </children>
